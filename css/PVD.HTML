@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>PUNTO Y KIOSCOS VIVE DIGITAL PUERTO BOYACA</h2>
+  <p>Escriba una palabra clave para realizar busqueda deseada:</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Busqueda...">
+  <br>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>TIPO</th>
+        <th>CATEGORIA</th>
+        <th>ZONA</th>
+        <th>UBICACCION</th>
+        <th>SEDE</th>
+        <th>ESTADO</th>
+    
+    </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>KVD</td>
+        <td>FASE 2</td>
+        <td>RURAL</td>
+        <td>INTITUCION TECNICA JOSE JOAQUIN ORTIZ</td>
+        <td>ESCUELA EL TRIQUE</td>
+        <td>EN OPERACIÓN</td>
+      </tr>
+      <tr>
+        <td>KVD</td>
+        <td>FASE 2</td>
+        <td>RURAL</td>
+        <td>INTITUCION TECNICA JOSE JOAQUIN ORTIZ</td>
+        <td>ESCUELA EL TRIANGULO KM 25</td>
+        <td>EN OPERACIÓN</td>
+      </tr>
+      <tr>
+        <td>KVD</td>
+        <td>FASE 2</td>
+        <td>RURAL</td>
+        <td>INTITUCION TECNICA JOSE JOAQUIN ORTIZ</td>
+        <td>ESCUELA PUERTO GUTIERREZ</td>
+        <td>EN OPERACIÓN</td>
+      </tr>
+      <tr>
+        <td>KVD</td>
+        <td>FASE 2</td>
+        <td>RURAL</td>
+        <td>INTITUCION EDUCATIVA GUANEGRO</td>
+        <td>ESCUELA EL PESCADO</td>
+        <td>EN OPERACIÓN</td>
+      </tr>
+      <tr>
+        <td>KVD</td>
+        <td>FASE 2</td>
+        <td>RURAL</td>
+        <td>INTITUCION EDUCATIVA GUANEGRO</td>
+        <td>COLEGIO  DE EDUCACION BASICA GUANEGRO</td>
+        <td>EN OPERACIÓN</td>
+      </tr>
+      <tr>
+        <td>KVD</td>
+        <td>FASE 2</td>
+        <td>RURAL</td>
+        <td>INTITUCION EDUCATIVA GUANEGRO</td>
+        <td>ESCUELA  ALTO GUAGUAQUI</td>
+        <td>EN OPERACIÓN</td>
+      </tr>
+      <tr>
+        <td>KVD</td>
+        <td>FASE 2</td>
+        <td>RURAL</td>
+        <td>INSTITUCION EDUCATIVA EL PRADO</td>
+        <td>ESCUELA EL PALAGUA ALIANZA</td>
+        <td>EN OPERACIÓN</td>
+      </tr>
+      <tr>
+        <td>KVD</td>
+        <td>FASE 2</td>
+        <td>RURAL</td>
+        <td>INSTITUCION EDUCATIVA EL PRADO</td>
+        <td>ESCUELA CRUZE EL CHAPARRO</td>
+      </TR>
+      <tr>
+        <td>KVD</td>
+        <td>FASE 2</td>
+        <td>RURAL</td>
+        <td>INSTITUCION AGROPECUARIA EL MARFIL</td>
+        <td>ESCUELA CRUZE EL CHAPARRO</td>
+        <td>EN OPERACIÓN</td>
+      </tr>
+      <tr>
+        <td>KVD</td>
+        <td>FASE 3</td>
+        <td>RURAL</td>
+        <td>INSTITUCION AGROPECUARIA EL MARFIL</td>
+        <td>ESCUELA SIMON BOLIVAR</td>
+        <td>EN OPERACIÓN</td>
+      </tr>
+       <tr>
+        <td>KVD</td>
+        <td>FASE 3</td>
+        <td>RURAL</td>
+        <td>INSTITUCION AGROPECUARIA EL MARFIL</td>
+        <td>ESCUELA PRIMARIA EL MARFIL</td>
+        <td>EN OPERACIÓN</td>
+      </tr>
+ <tr>
+        <td>KVD</td>
+        <td>FASE 2</td>
+        <td>RURAL</td>
+        <td>INTITUCION EDUCATIVA PUERTO PINZON</td>
+        <td>COLEGIO PUERTO PINZON</td>
+        <td>EN OPERACIÓN</td>
+      </tr>
+ <tr>
+        <td>PVD</td>
+        <td>TIPO A</td>
+        <td>URBANA</td>
+        <td>BIBLIOTECA PUBLICA MUNICIPAL LIS CARLOS GALAN SARMIENTO
+</td>
+        <td>CRA 5 ENTRE CALLE 23 Y 24
+</td>
+        <td>EN OPERACIÓN</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  </div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</body>
+</html>
